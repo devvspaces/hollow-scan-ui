@@ -7,7 +7,6 @@ const words = ["RESTOCKS", "RELEASES", "DROPS", "ITEMS"]
 
 export function HeroSection() {
   const [currentWord, setCurrentWord] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
   const [displayedChars, setDisplayedChars] = useState("")
   const [isTyping, setIsTyping] = useState(true)
 
