@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Unlock, Zap, Crown } from "lucide-react"
+import Image from "next/image"
 
 const tiers = [
   {
     icon: Unlock,
     name: "ACCESS",
     tagline: "Entry Level",
+    nftImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sd.png-I0l88FPdJgvjIWGtjBcHf6eTj0CixP.jpeg",
     features: [
       "Broad ecosystem entry",
       "Reward cycle eligibility",
@@ -22,6 +24,7 @@ const tiers = [
     icon: Zap,
     name: "PRO",
     tagline: "Enhanced Level",
+    nftImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.png-q1huZNHg4uoR4Y0cb5q0143WpXbYEP.jpeg",
     features: [
       "Enhanced platform access",
       "Higher participation rates",
@@ -37,6 +40,7 @@ const tiers = [
     icon: Crown,
     name: "ELITE",
     tagline: "Maximum Level",
+    nftImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9.png-OMWpjQy0QuYxL5kvPGtXSLzuJ16niD.jpeg",
     features: [
       "Maximum ecosystem access",
       "Exclusive privileges",
@@ -143,19 +147,35 @@ export function TiersSection() {
                   />
 
                   <div className="relative z-10">
-                    {/* Icon */}
-                    <div
-                      className={`w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-colors ${
-                        tier.featured
-                          ? "bg-accent/20 border border-accent/30"
-                          : "bg-muted/50 border border-border"
-                      }`}
-                    >
-                      <Icon
-                        className={`w-8 h-8 ${
-                          tier.featured ? "text-accent" : "text-muted-foreground"
+                    {/* NFT Avatar */}
+                    <div className="relative mb-6">
+                      <div
+                        className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                          tier.featured
+                            ? "border-accent shadow-lg shadow-accent/20"
+                            : isHovered
+                            ? "border-accent/50"
+                            : "border-border"
                         }`}
-                      />
+                      >
+                        <Image
+                          src={tier.nftImage}
+                          alt={`${tier.name} tier NFT`}
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+                      </div>
+                      {/* Icon badge */}
+                      <div
+                        className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-lg flex items-center justify-center ${
+                          tier.featured
+                            ? "bg-accent text-background"
+                            : "bg-card border border-border text-muted-foreground"
+                        }`}
+                      >
+                        <Icon className="w-4 h-4" />
+                      </div>
                     </div>
 
                     {/* Name and tagline */}

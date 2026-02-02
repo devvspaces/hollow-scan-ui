@@ -2,6 +2,14 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Zap, Globe, Users, Shield } from "lucide-react"
+import Image from "next/image"
+
+const nftPreviews = [
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.png-q1huZNHg4uoR4Y0cb5q0143WpXbYEP.jpeg", alt: "Purple Hair NFT" },
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sd.png-I0l88FPdJgvjIWGtjBcHf6eTj0CixP.jpeg", alt: "Explorer NFT" },
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wer.png-f7HHVcb6D70ecHGiYp55MUzGWzKEyB.jpeg", alt: "Fire Samurai NFT" },
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9.png-OMWpjQy0QuYxL5kvPGtXSLzuJ16niD.jpeg", alt: "King Frog NFT" },
+]
 
 const features = [
   {
@@ -136,21 +144,41 @@ export function WhatIsSection() {
         </div>
 
         {/* NFT introduction teaser */}
-        <div className="mt-16 p-8 border border-accent/30 bg-accent/5 backdrop-blur-sm">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+        <div className="mt-16 p-8 border border-accent/30 bg-accent/5 backdrop-blur-sm overflow-hidden">
+          <div className="flex flex-col lg:flex-row items-start gap-8">
             <div className="flex-1">
               <p className="text-xs font-mono text-accent mb-2">ECOSYSTEM EXPANSION</p>
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 NFT Collection Coming Soon
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-6">
                 A limited NFT collection designed to reward long-term community members with enhanced access, 
                 perks, and participation opportunities inside the ecosystem.
               </p>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                <span className="text-sm font-mono text-accent">IN DEVELOPMENT</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-sm font-mono text-accent">IN DEVELOPMENT</span>
+            
+            {/* NFT Preview Stack */}
+            <div className="relative w-full lg:w-auto flex justify-center lg:justify-end">
+              <div className="relative h-32 w-64 md:w-80">
+                {nftPreviews.map((nft, index) => (
+                  <div
+                    key={index}
+                    className="absolute w-24 md:w-28 aspect-square rounded-lg overflow-hidden border-2 border-accent/30 shadow-xl transition-all duration-500 hover:z-50 hover:scale-110 hover:border-accent"
+                    style={{
+                      left: `${index * 45}px`,
+                      top: `${index % 2 === 0 ? 0 : 20}px`,
+                      zIndex: nftPreviews.length - index,
+                      transform: `rotate(${-5 + index * 4}deg)`,
+                    }}
+                  >
+                    <Image src={nft.src} alt={nft.alt} fill className="object-cover" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

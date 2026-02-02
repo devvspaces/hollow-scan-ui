@@ -7,6 +7,7 @@ import { MouseGradientBackground } from "@/components/mouse-gradient-background"
 import { WhitepaperHero } from "./sections/whitepaper-hero"
 import { WhatIsSection } from "./sections/what-is-section"
 import { NFTUtilitySection } from "./sections/nft-utility-section"
+import { NFTShowcaseSection } from "./sections/nft-showcase-section"
 import { RewardCyclesSection } from "./sections/reward-cycles-section"
 import { HorizontalScrollSection } from "./sections/horizontal-scroll-section"
 import { TiersSection } from "./sections/tiers-section"
@@ -67,6 +68,7 @@ export function WhitepaperContent({ isVisible }: WhitepaperContentProps) {
         <WhitepaperHero />
         <WhatIsSection />
         <NFTUtilitySection />
+        <NFTShowcaseSection />
         <RewardCyclesSection />
         <HorizontalScrollSection />
         <TiersSection />
