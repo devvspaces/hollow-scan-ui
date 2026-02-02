@@ -14,23 +14,31 @@ export const metadata: Metadata = {
   description:
     "Next-generation automation platform for limited-edition products. Dominate every drop with precision-engineered speed.",
   icons: {
-    icon: [
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  openGraph: {
+    title: "Hollowscan - Never Miss a Restock",
+    description:
+      "Next-generation automation platform for limited-edition products. Dominate every drop with precision-engineered speed.",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/og-image.png",
+        width: 1200,
+        height: 1200,
+        alt: "Hollowscan Logo",
       },
     ],
-    apple: "/apple-icon.png",
+    type: "website",
   },
-    generator: 'v0.app'
+  twitter: {
+    card: "summary_large_image",
+    title: "Hollowscan - Never Miss a Restock",
+    description:
+      "Next-generation automation platform for limited-edition products. Dominate every drop with precision-engineered speed.",
+    images: ["/og-image.png"],
+  },
+  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
