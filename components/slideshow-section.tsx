@@ -9,9 +9,9 @@ interface SlideItem {
 }
 
 const slides: SlideItem[] = [
-  { src: "/images/slideshow-1.webp", alt: "Pokemon Center Tokyo DX" },
-  { src: "/images/slideshow-3.png", alt: "Product Listing" },
-  { src: "/images/slideshow-4.webp", alt: "Pokemon Center London" },
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gotta-Draw-em-All-Fairy-Type-Collaboration-Pokemon-Fan-Art-Featured-Image-qq9LXIQbWAPIBcIAS1nsuQ5F3DGBl8.avif", alt: "Pokemon Fan Art Collaboration" },
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The-best-starter-Pokemon-in-2025-d102GOxCAXwsJKkRSsllQrp8aIEcXK.webp", alt: "Best Starter Pokemon" },
+  { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pokemon_Legends_Z-A_Key_Visual-jsu42KzEw754O4QvSNAfTRdKMMYWgy.avif", alt: "Pokemon Legends Z-A" },
 ]
 
 export function SlideshowSection() {
