@@ -3,32 +3,32 @@
 import { Zap, Globe, BarChart3, Layers } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
+const features = [
+  {
+    icon: Zap,
+    title: "Sub-50ms Execution",
+    description: "Lightning-fast automated checkout that secures items before they sell out.",
+  },
+  {
+    icon: Globe,
+    title: "100+ Site Coverage",
+    description: "Support for major retailers across North America, Europe, and Asia.",
+  },
+  {
+    icon: Layers,
+    title: "Multi-Task Support",
+    description: "Run multiple tasks simultaneously and secure more than one item per release.",
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics Dashboard",
+    description: "Track task success rates and checkout performance to optimize results.",
+  },
+]
+
 export function FeaturesSection() {
   const [visibleItems, setVisibleItems] = useState<number[]>([])
   const sectionRef = useRef<HTMLElement>(null)
-
-  const features = [
-    {
-      icon: Zap,
-      title: "Sub-50ms Execution",
-      description: "Lightning-fast automated checkout that secures items before they sell out.",
-    },
-    {
-      icon: Globe,
-      title: "100+ Site Coverage",
-      description: "Support for major retailers across North America, Europe, and Asia.",
-    },
-    {
-      icon: Layers,
-      title: "Multi-Task Support",
-      description: "Run multiple tasks simultaneously and secure more than one item per release.",
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics Dashboard",
-      description: "Track task success rates and checkout performance to optimize results.",
-    },
-  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(

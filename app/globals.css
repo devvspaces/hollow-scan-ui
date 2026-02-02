@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -155,4 +154,24 @@
 
 .animate-blink {
   animation: blink 1s step-end infinite;
+}
+
+/* Smooth scroll for whitepaper */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Duration utilities for animations */
+.duration-600 {
+  transition-duration: 600ms;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
