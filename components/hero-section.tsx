@@ -46,12 +46,20 @@ export function HeroSection() {
           <Image src="/images/hollowscan-logo.png" alt="Hollowscan logo" width={32} height={32} className="rounded" />
           <span className="text-lg font-semibold tracking-tight text-foreground">Hollowscan</span>
         </div>
-        <a
-          href="#waitlist"
-          className="px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded hover:bg-foreground/90 transition-colors"
-        >
-          Join Waitlist
-        </a>
+        <nav className="flex items-center gap-6">
+          <a
+            href="/whitepaper"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors font-mono"
+          >
+            Whitepaper
+          </a>
+          <a
+            href="#waitlist"
+            className="px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded hover:bg-foreground/90 transition-colors"
+          >
+            Join Waitlist
+          </a>
+        </nav>
       </header>
 
       {/* Main Hero Content */}
