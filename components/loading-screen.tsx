@@ -187,8 +187,8 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         <div>v2.0.1</div>
       </div>
       <div className="absolute top-6 right-6 text-[10px] font-mono text-muted-foreground/40 text-right">
-        <div>WHITEPAPER</div>
-        <div>2024</div>
+        <div>PLATFORM</div>
+        <div>2025</div>
       </div>
       <div className="absolute bottom-6 left-6 text-[10px] font-mono text-muted-foreground/40">
         <div>||||||||||||||||</div>
