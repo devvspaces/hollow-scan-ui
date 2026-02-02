@@ -5,29 +5,7 @@ export function Footer() {
     <footer className="border-t border-border">
       {/* Main Footer Links */}
       <div className="px-6 py-16 md:px-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Developers */}
-          <div>
-            <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">Developers</p>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-                  Docs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-                  API
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
-                  SDK
-                </a>
-              </li>
-            </ul>
-          </div>
-
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8">
           {/* Resources */}
           <div>
             <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">Resources</p>

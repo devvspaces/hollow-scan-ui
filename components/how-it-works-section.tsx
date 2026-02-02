@@ -38,7 +38,7 @@ export function HowItWorksSection() {
                   src={step.image || "/placeholder.svg"}
                   alt={step.title}
                   fill
-                  className="object-cover opacity-80"
+                  className="object-contain opacity-80"
                 />
               </div>
               <div className="p-6 md:p-8">
