@@ -50,7 +50,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                <a href="/privacy-policy" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
                   Privacy Policy
                 </a>
               </li>
