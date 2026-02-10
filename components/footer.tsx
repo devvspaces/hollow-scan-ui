@@ -16,7 +16,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                <a href="mailto:support@hollowscan.com" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
                   Support
                 </a>
               </li>
@@ -44,11 +44,11 @@ export function Footer() {
           <div>
             <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">Legal</p>
             <ul className="space-y-3">
-              <li>
+              {/* <li>
                 <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
                   Terms of Use
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/privacy-policy" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
                   Privacy Policy
