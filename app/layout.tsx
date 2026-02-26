@@ -4,6 +4,7 @@ import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LoadingProvider } from "@/contexts/loading-context"
 import { GlobalLoadingWrapper } from "@/components/global-loading-wrapper"
+import { PromotionalFloatingCapsule } from "@/components/promotional"
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"] })
@@ -58,6 +59,7 @@ export default function RootLayout({
             {children}
           </GlobalLoadingWrapper>
         </LoadingProvider>
+        <PromotionalFloatingCapsule />
         <Analytics />
       </body>
     </html>
