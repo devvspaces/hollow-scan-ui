@@ -29,11 +29,11 @@ export function PromotionalFloatingCapsule() {
     {
       id: "capsule-1",
       type: "LAUNCH",
-      title: "WIN THE PIKACHU XY-P PROMO CARD PSA 10 MINT JAPANESE COLLECTIBLE",
-      subtitle: "Experience the elite standard of digital collectible giveaways. Powered by the Ronin Network, every entry is100% transparent and verifiable on-chain.",
-      image: "https://raffle.ronhub.io/pikachu-front.jpg",
+      title: "WIN THE 1ST EDITION CHARIZARD",
+      subtitle: "Own one of the rarest collectibles in history. A BGS 7.5 Near Mint+ First Edition Charizard Holo. Valued at $26,000.00. Verified on-chain, exclusively on HollowScan.",
+      image: "https://raffle.hollowscan.com/charizard_bgs_back.jpg",
       icon: iconForType("LAUNCH"),
-      url: "https://raffle.ronhub.io/",
+      url: "https://raffle.hollowscan.com/",
       actionLabel: "Explore",
     },
   ]
