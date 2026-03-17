@@ -59,7 +59,7 @@ export default function RootLayout({
             {children}
           </GlobalLoadingWrapper>
         </LoadingProvider>
-        <PromotionalFloatingCapsule />
+        {/* <PromotionalFloatingCapsule /> */}
         <Analytics />
       </body>
     </html>
