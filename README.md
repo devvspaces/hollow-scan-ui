@@ -84,6 +84,7 @@ The project follows a component-driven development approach:
 
 ---
 
+
 ## 🔧 Getting Started
 
 First, install the dependencies:
