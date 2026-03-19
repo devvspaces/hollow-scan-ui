@@ -139,10 +139,21 @@ export function FinalSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link
-              href="/#waitlist"
+              href="https://hollowscan.com/ios"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-background font-semibold rounded hover:bg-accent/90 transition-all hover:scale-105"
             >
-              JOIN WAITLIST
+              APP STORE
+              <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+            <Link
+              href="https://hollowscan.com/android"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background font-semibold rounded hover:bg-foreground/90 transition-all hover:scale-105"
+            >
+              GOOGLE PLAY
               <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </Link>
             <Link

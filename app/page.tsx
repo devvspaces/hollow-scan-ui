@@ -5,6 +5,8 @@ import { MarqueeSection } from "@/components/marquee-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { FeaturesSection } from "@/components/features-section"
 import { WaitlistSection } from "@/components/waitlist-section"
+import { FaqSection } from "@/components/faq-section"
+import { TradingCardSection } from "@/components/trading-card-section"
 import { Footer } from "@/components/footer"
 import { MouseGradientBackground } from "@/components/mouse-gradient-background"
 
@@ -16,9 +18,11 @@ export default function Home() {
         <HeroSection />
         <SlideshowSection />
         <StatsSection />
+        <TradingCardSection />
         <MarqueeSection />
         <HowItWorksSection />
         <FeaturesSection />
+        <FaqSection />
         <WaitlistSection />
         <Footer />
       </div>

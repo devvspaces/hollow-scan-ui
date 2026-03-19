@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 interface LoadingScreenProps {
   onComplete: () => void
@@ -121,7 +122,13 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 transition: "transform 0.1s linear",
               }}
             />
-            <span className="text-3xl font-bold text-accent font-mono relative z-10">HS</span>
+            <Image
+              src="/images/hollowscan-logo.png"
+              alt="Hollowscan"
+              width={52}
+              height={52}
+              className="relative z-10 object-contain"
+            />
           </div>
 
           {/* Orbiting dots */}

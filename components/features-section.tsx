@@ -1,28 +1,32 @@
 "use client"
 
-import { Zap, Globe, BarChart3, Layers } from "lucide-react"
+import { Bell, Bot, Globe, CreditCard } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const features = [
   {
-    icon: Zap,
-    title: "Sub-50ms Execution",
-    description: "Lightning-fast automated checkout that secures items before they sell out.",
+    icon: Bell,
+    title: "Real-Time Deal Alerts",
+    description:
+      "HollowScan scans hundreds of stores across the UK, USA, and Canada simultaneously and pushes instant notifications the moment a deal drops — before it sells out.",
+  },
+  {
+    icon: Bot,
+    title: "Telegram Bot Integration",
+    description:
+      "Link your account to the HollowScan Telegram bot and get premium alerts delivered directly to Telegram. Subscribe in-app or through Telegram — your premium syncs everywhere.",
   },
   {
     icon: Globe,
-    title: "100+ Site Coverage",
-    description: "Support for major retailers across North America, Europe, and Asia.",
+    title: "Multi-Region Coverage",
+    description:
+      "Browse and filter deals from UK, USA, and Canadian stores all in one feed, with smart category filtering to surface only what matters to you.",
   },
   {
-    icon: Layers,
-    title: "Multi-Task Support",
-    description: "Run multiple tasks simultaneously and secure more than one item per release.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics Dashboard",
-    description: "Track task success rates and checkout performance to optimize results.",
+    icon: CreditCard,
+    title: "Cross-Platform Premium Sync",
+    description:
+      "Pay once, unlock everywhere. Whether you subscribe via Google Play, Apple Pay, or Telegram, your premium status syncs instantly across all platforms.",
   },
 ]
 
@@ -57,9 +61,9 @@ export function FeaturesSection() {
         <div className="mb-16">
           <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">Features</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-            Built for Speed.
+            Built for Deals.
             <br />
-            Designed to Win.
+            Designed to Save.
           </h2>
         </div>
 

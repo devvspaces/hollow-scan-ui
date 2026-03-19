@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">Resources</p>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                <a href="#faq" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
                   FAQ
                 </a>
               </li>

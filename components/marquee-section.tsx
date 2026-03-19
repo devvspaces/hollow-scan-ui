@@ -1,11 +1,13 @@
 "use client"
 
 export function MarqueeSection() {
-  const items = Array(10).fill("JOIN WAITLIST")
+  const items = Array(10).fill("DOWNLOAD THE APP")
 
   return (
     <a
-      href="#waitlist"
+      href="https://hollowscan.com/ios"
+      target="_blank"
+      rel="noopener noreferrer"
       className="block border-y border-border bg-foreground text-background overflow-hidden py-4 hover:bg-foreground/90 transition-colors"
     >
       <div className="flex animate-marquee whitespace-nowrap">

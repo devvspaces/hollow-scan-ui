@@ -9,7 +9,7 @@ export function StatsSection() {
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const launchDate = new Date("2025-06-01T00:00:00Z")
+    const launchDate = new Date("2026-01-01T00:00:00Z")
 
     const updateTimer = () => {
       const now = new Date()
@@ -61,7 +61,7 @@ export function StatsSection() {
       <div className="grid grid-cols-2 lg:grid-cols-4">
         {/* Timer */}
         <div className="p-6 md:p-8 border-r border-b lg:border-b-0 border-border group hover:bg-card/50 transition-colors">
-          <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider mb-3">SINCE DEVELOPMENT</p>
+          <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider mb-3">SINCE LAUNCH</p>
           <p className="text-2xl md:text-3xl font-mono text-foreground group-hover:text-accent transition-colors">
             {formatNumber(elapsed.days)}:{formatNumber(elapsed.hours)}:{formatNumber(elapsed.minutes)}:
             <span className="text-accent">{formatNumber(elapsed.seconds)}</span>
@@ -104,7 +104,7 @@ export function StatsSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
             </span>
-            <span className="text-sm text-foreground">Development</span>
+            <span className="text-sm text-foreground">Live on iOS &amp; Android</span>
           </div>
         </div>
       </div>

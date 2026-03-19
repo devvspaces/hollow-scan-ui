@@ -17,7 +17,7 @@ const steps = [
     step: "03",
     title: "Deliver",
     description: "Your items are secured and shipped directly to you.",
-    image: "/images/delivery.png",
+    image: "/images/delivery.jpg",
   },
 ]
 
