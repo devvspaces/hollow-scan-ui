@@ -71,6 +71,7 @@ export function HeroSection() {
       {/* Main Hero Content */}
       <div className="flex-1 flex flex-col items-center justify-center px-6 py-20">
         <div className="max-w-5xl mx-auto text-center">
+
           {/* Small tagline */}
           <p className="text-sm text-muted-foreground tracking-widest uppercase mb-8 animate-pulse">
             The fastest app for securing
@@ -87,10 +88,31 @@ export function HeroSection() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             The only automation platform offering unified monitoring across restocks, drops, and releases. From the team
             that pioneered automated checkout technology.
           </p>
+
+          {/* Whitepaper Notice */}
+          <a
+            href="/whitepaper"
+            className="group inline-flex items-center gap-2 px-4 py-2 mb-12 rounded-full border border-border bg-background/40 hover:bg-muted/50 transition-colors text-sm backdrop-blur-sm shadow-sm"
+          >
+            <span className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold text-background uppercase tracking-wider">
+              NEW
+            </span>
+            <span className="text-muted-foreground font-medium group-hover:text-foreground transition-colors pr-1">
+              Explore the <span className="text-foreground">Rewards Matrix</span> & ecosystem features
+            </span>
+            <svg
+              className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
 
           {/* App Store Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -125,9 +147,11 @@ export function HeroSection() {
           </div>
 
           {/* QR Code hint */}
-          <p className="text-xs text-muted-foreground font-mono tracking-widest">
-            ↓ SCAN TO DOWNLOAD
-          </p>
+          <a href="#download" className="inline-block group">
+            <p className="text-xs text-muted-foreground font-mono tracking-widest hover:text-foreground transition-colors cursor-pointer">
+              ↓ SCAN TO DOWNLOAD
+            </p>
+          </a>
         </div>
       </div>
 

@@ -102,7 +102,7 @@ export function FinalSection() {
         <div className="text-center py-16 border-t border-b border-border">
           <p className="text-sm font-mono text-accent mb-4">FINAL WORD</p>
 
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight tracking-tighter">
             Technology. Speed.<br />Opportunity.
           </h2>
 
@@ -180,7 +180,7 @@ export function FinalSection() {
             </div>
             <div className="flex items-center gap-6 text-xs font-mono text-muted-foreground">
               <span>DOCUMENT: HS-WP-001</span>
-              <span>2024</span>
+              <span>{new Date().getFullYear()}</span>
             </div>
           </div>
         </footer>

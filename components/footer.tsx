@@ -11,6 +11,11 @@ export function Footer() {
             <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">Resources</p>
             <ul className="space-y-3">
               <li>
+                <a href="/whitepaper" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+                  Whitepaper
+                </a>
+              </li>
+              <li>
                 <a href="#faq" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
                   FAQ
                 </a>
@@ -73,7 +78,7 @@ export function Footer() {
             <Image src="/images/hollowscan-logo.png" alt="Hollowscan logo" width={24} height={24} className="rounded" />
             <span className="text-sm font-medium text-foreground">Hollowscan</span>
           </div>
-          <p className="text-xs text-muted-foreground font-mono">© 2026 Hollowscan. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground font-mono">© {new Date().getFullYear()} Hollowscan. All rights reserved.</p>
         </div>
       </div>
 

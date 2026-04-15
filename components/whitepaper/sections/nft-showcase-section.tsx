@@ -165,39 +165,6 @@ export function NFTShowcaseSection() {
                     fill
                     className="object-cover"
                   />
-                  
-                  {/* Hover overlay */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent transition-opacity duration-300 ${
-                      isActive ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-
-                  {/* NFT Info - Only show on active */}
-                  <div
-                    className={`absolute bottom-0 left-0 right-0 p-4 transition-all duration-500 ${
-                      isActive ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-bold text-foreground">{nft.name}</h4>
-                      <span
-                        className={`text-[10px] font-mono px-2 py-0.5 rounded border ${rarityColors[nft.rarity]}`}
-                      >
-                        {nft.rarity.toUpperCase()}
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-1">
-                      {nft.traits.map((trait, tIndex) => (
-                        <span
-                          key={tIndex}
-                          className="text-[9px] font-mono text-muted-foreground bg-muted/50 px-1.5 py-0.5 rounded"
-                        >
-                          {trait}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
 
                   {/* Shine effect */}
                   {isActive && (
@@ -226,12 +193,11 @@ export function NFTShowcaseSection() {
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 max-w-4xl mx-auto">
           {[
-            { value: "5,000", label: "Total Supply" },
-            { value: "5", label: "Unique Rarities" },
-            { value: "100+", label: "Trait Combos" },
-            { value: "3", label: "Tier Levels" },
+            { value: "5,000", label: "NFTs" },
+            { value: "10", label: "1-of-1s" },
+            { value: "152", label: "Unique Traits" },
           ].map((stat, index) => (
             <div
               key={index}

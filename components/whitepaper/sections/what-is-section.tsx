@@ -20,7 +20,7 @@ const features = [
   {
     icon: Globe,
     title: "Global Coverage",
-    description: "Automated monitoring across hundreds of sites in North America, Europe, and Asia.",
+    description: "Automated monitoring across hundreds of stores in UK, USA, and Canada.",
   },
   {
     icon: Users,

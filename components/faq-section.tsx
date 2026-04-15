@@ -39,7 +39,7 @@ const faqContent = [
       },
       {
         q: "How does Premium work?",
-        a: "Premium removes the daily limit, giving you unlimited access to our real-time feed and allowing you to see high-value deals immediately across all regions.",
+        a: "Premium removes ALL limits, giving you unlimited access to our real-time feed and allowing you to see high-value deals immediately across all regions.",
       },
     ],
   },
