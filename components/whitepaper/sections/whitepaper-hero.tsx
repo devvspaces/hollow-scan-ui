@@ -120,18 +120,18 @@ export function WhitepaperHero() {
         <div className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full mb-8">
           <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
           <span className="text-xs font-mono text-muted-foreground">DOCUMENT v1.0</span>
-          <span className="text-xs font-mono text-accent">2024</span>
+          <span className="text-xs font-mono text-accent">{new Date().getFullYear()}</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-6">
-          <span className="block">HOLLOW</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground mb-6">
+          <span className="block italic">HOLLOW</span>
           <span className="block text-accent">SCAN</span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
+        <p className="text-lg md:text-2xl text-muted-foreground mb-4 font-light leading-snug max-w-sm mx-auto">
           Never Miss a Restock. Never Miss a Release.
         </p>
-        <p className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+        <p className="text-2xl md:text-4xl font-bold text-foreground mb-12 tracking-tight">
           Dominate Every Time.
         </p>
 

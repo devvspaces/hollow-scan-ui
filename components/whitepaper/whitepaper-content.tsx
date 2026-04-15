@@ -1,8 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState, useCallback } from "react"
-import Image from "next/image"
-import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
 import { MouseGradientBackground } from "@/components/mouse-gradient-background"
 import { WhitepaperHero } from "./sections/whitepaper-hero"
 import { WhatIsSection } from "./sections/what-is-section"
@@ -20,9 +18,24 @@ interface WhitepaperContentProps {
 }
 
 export function WhitepaperContent({ isVisible }: WhitepaperContentProps) {
-  const [activeSection, setActiveSection] = useState(0)
+  const [activeSection, setActiveSection] = useState("hero")
   const [scrollProgress, setScrollProgress] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
+
+  const scrollToSection = (id: string) => {
+    const element = document.querySelector(`[data-section="${id}"]`)
+    const header = document.querySelector("header")
+    if (element) {
+      const navHeight = header ? header.offsetHeight : 64
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,17 +45,21 @@ export function WhitepaperContent({ isVisible }: WhitepaperContentProps) {
       const progress = Math.min(scrollTop / docHeight, 1)
       setScrollProgress(progress)
 
-      // Determine active section
+      // Determine active section based on proximity to center of viewport
       const sections = containerRef.current.querySelectorAll("[data-section]")
-      sections.forEach((section, index) => {
+      sections.forEach((section) => {
         const rect = section.getBoundingClientRect()
+        const sectionId = section.getAttribute("data-section")
+        
+        // If the section is currently occupying the middle of the screen
         if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          setActiveSection(index)
+          if (sectionId) setActiveSection(sectionId)
         }
       })
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll() // Run once on mount
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -62,7 +79,10 @@ export function WhitepaperContent({ isVisible }: WhitepaperContentProps) {
       </div>
 
       {/* Navigation */}
-      <WhitepaperNav activeSection={activeSection} />
+      <WhitepaperNav 
+        activeSection={activeSection} 
+        onSectionClick={scrollToSection} 
+      />
 
       <div className="relative z-10">
         <WhitepaperHero />

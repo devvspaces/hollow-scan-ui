@@ -6,7 +6,7 @@ import { Star, Lock, Key, Crown, Sparkles } from "lucide-react"
 const utilities = [
   { icon: Sparkles, label: "Enhanced App Features", description: "Unlock premium automation tools" },
   { icon: Crown, label: "Ecosystem Status", description: "Recognition within the community" },
-  { icon: Star, label: "Reward Cycle Eligibility", description: "Participate in seasonal rewards" },
+  { icon: Star, label: "Rewards Matrix Eligibility", description: "Participate in seasonal rewards" },
   { icon: Key, label: "Priority Access", description: "First access to new tools & drops" },
   { icon: Lock, label: "Optional NFT Locking", description: "Deeper participation benefits" },
 ]
